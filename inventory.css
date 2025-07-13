@@ -1,0 +1,278 @@
+/* Reset some default styles */
+body, h1, h3, ul, li, table, input, select, textarea, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body background */
+body {
+  background: #f5f8fa;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 37px; 
+  margin: 0; 
+  padding: 10px 20px;
+  display: flex;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: black;
+  color: beige;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000; 
+}
+
+.navbar .left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 30px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.right ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.right ul li {
+  margin: 0 20px; 
+}
+
+.right ul li a {
+  color: beige;
+  text-decoration: none;
+  margin-right: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.right ul li a:hover {
+  color: aqua;
+  font-weight: bold;
+  transform: scale(1.1); 
+}
+
+.right ul li:last-child {
+  margin-right: 10px;
+}
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.dark-mode .about-section {
+  background-color: #2a2a2a;
+  box-shadow: none;
+}
+
+.dark-mode .about-section h1,
+.dark-mode .about-section h2,
+.dark-mode .core-values ul li strong {
+  color: #4ecdc4;
+}
+
+.dark-mode .core-values ul li {
+  color: #ccc;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin: 30px 0 10px;
+  font-size: 32px;
+  color: #1b262c;
+}
+
+h3 {
+  text-align: center;
+  color: #3282b8;
+  margin-bottom: 20px;
+}
+
+/* Inventory Form */
+.inventory-form-container {
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 25px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.inventory-form-container table {
+  width: 100%;
+}
+
+.inventory-form-container td {
+  padding: 12px 10px;
+}
+
+.inventory-form-container input[type="text"],
+.inventory-form-container input[type="number"],
+.inventory-form-container input[type="date"],
+.inventory-form-container select,
+.inventory-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.inventory-form-container input:focus,
+.inventory-form-container textarea:focus,
+.inventory-form-container select:focus {
+  border-color: #3282b8;
+}
+
+.submit-cell {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.inventory-form-container input[type="submit"] {
+  background-color: #0f4c75;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.inventory-form-container input[type="submit"]:hover {
+  background-color: #1b6ca8;
+}
+
+/* Inventory Controls */
+.inventory-controls {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 0;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters input[type="text"],
+.filters select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+  min-width: 150px;
+}
+
+.filters button {
+  background-color: #0f4c75;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filters button:hover {
+  background-color: #1b6ca8;
+}
+
+/* Inventory Table */
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.inventory-table thead {
+  background-color: #3282b8;
+  color: white;
+}
+
+.inventory-table th,
+.inventory-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.inventory-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Buttons */
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  margin: 2px;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+.edit-btn {
+  background-color: #28a745;
+}
+
+.edit-btn:hover {
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #040404;
+  color: white;
+  margin-top: 60px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer a {
+  color: #bbe1fa;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

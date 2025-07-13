@@ -1,0 +1,154 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6f4f1;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #070707, #02070f);
+  padding: 12px 30px;
+  color: rgb(6, 5, 5);
+  box-shadow: 0 2px 10px rgba(10, 10, 10, 0.1);
+  height: 50px;
+}
+
+.navbar .left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .left img {
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.navbar .left h4 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar .right ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .right ul li a {
+  color: #f2f4f6;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar .right ul li a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.appointment-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: #f4fdfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  color: #0a5275;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.appointment-form label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f8fafc;
+  transition: 0.3s ease;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #0ea5e9;
+}
+
+.submit-button {
+  background-color: #0a5275;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #084d6e;
+  transform: scale(1.02);
+}
+
+
+footer {
+  background-color: #0a5275;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 60px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer-content p {
+  margin: 6px 0;
+}
+
+.footer-content a {
+  color: #c2e9f3;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+  color: #60a5fa;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reporting and Analytics | HMS CONNECT</title>
+  <link rel="stylesheet" href="reporting.css" />
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="left">
+      <img src="v987-18a.jpg" alt="Logo">
+      <h4>HMS CONNECT</h4>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="reporting-section">
+    <h1 class="section-title">📊 Reporting and Analytics</h1>
+    <p class="section-subtitle">View and generate data-driven insights to improve hospital performance.</p>
+
+    <div class="report-filters">
+      <h2>🔍 Filter Reports</h2>
+      <form>
+        <label for="report-type">Report Type</label>
+        <select id="report-type" name="report-type" required>
+          <option value="" disabled selected>Select report type</option>
+          <option value="patients">Patient Admissions</option>
+          <option value="appointments">Appointments</option>
+          <option value="billing">Billing Summary</option>
+          <option value="inventory">Inventory Usage</option>
+        </select>
+
+        <label for="date-from">From</label>
+        <input type="date" id="date-from" name="date-from" required>
+
+        <label for="date-to">To</label>
+        <input type="date" id="date-to" name="date-to" required>
+
+        <button type="submit" class="generate-btn">📈 Generate Report</button>
+      </form>
+    </div>
+
+    <div class="report-output">
+      <h2>📑 Report Preview</h2>
+      <div class="report-placeholder">
+        <p>No report generated yet. Use the filters above to begin.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="download-section">
+    <h2 class="section-title">⬇️ Download Previous Reports</h2>
+    <form class="download-form">
+      <label for="report-download">Select a report</label>
+      <select id="report-download" name="report-download" required>
+        <option value="">-- Select a report --</option>
+        <option value="report-patients-apr.pdf">Patient Admissions - April</option>
+        <option value="report-billing-q1.pdf">Billing Summary - Q1</option>
+        <option value="report-inventory-mar.pdf">Inventory Usage - March</option>
+      </select>
+      <button type="submit" class="download-btn">Download</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 HMS CONNECT. All rights reserved.</p>
+      <p>Developed by: Satyam Singh</p>
+      <p>Contact: support@hmsconnect.com | +91 8523697418</p>
+      <p>Follow us on:
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

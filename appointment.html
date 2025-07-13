@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Appointment Scheduling | HMS CONNECT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="Appointment Scheduling.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="left">
+      <img src="v987-18a.jpg" alt="Logo">
+      <h4>HMS CONNECT</h4>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Appointment Form -->
+  <section class="appointment-section">
+    <h1 class="section-title">Book an Appointment</h1>
+    <p class="section-subtitle">Fill in the details below to schedule your appointment.</p>
+
+    <form class="appointment-form">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+
+      <label for="department">Department</label>
+      <select id="department" name="department" required>
+        <option value="">--Select Department--</option>
+        <option value="cardiology">Cardiology</option>
+        <option value="neurology">Neurology</option>
+        <option value="orthopedics">Orthopedics</option>
+        <option value="pediatrics">Pediatrics</option>
+        <option value="general">General Medicine</option>
+      </select>
+
+      <label for="doctor">Preferred Doctor</label>
+      <input type="text" id="doctor" name="doctor" placeholder="Doctor's name (optional)" />
+
+      <label for="date">Appointment Date</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="time">Preferred Time</label>
+      <input type="time" id="time" name="time" required />
+
+      <label for="message">Additional Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Any specific concern..."></textarea>
+
+      <button type="submit" class="submit-button">Schedule Appointment</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 HMS CONNECT. All rights reserved.</p>
+      <p>Developed by: Satyam Singh</p>
+      <p>Contact: support@hmsconnect.com | +91 1236547890</p>
+      <p>Follow us on:
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+

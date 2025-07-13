@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: linear-gradient(to right, #e0f7fa, #e1f5fe);
+  color: #333;
+  padding-top: 80px;
+  line-height: 1.6;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #080000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .logo {
+  height: 30px;
+  margin-right: 1rem;
+  border-radius: 20%;
+  object-fit: cover;
+  
+}
+
+
+.navbar h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar .right ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar .right a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .right a:hover {
+  color: #ffd54f;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #003b5c;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.ehr-form, .download-form {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.ehr-form fieldset {
+  border: none;
+  margin-bottom: 25px;
+}
+
+.ehr-form legend {
+  font-size: 1.3rem;
+  color: #006064;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #00796b;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submit-button {
+  background-color: #00796b;
+  color: #fff;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #004d40;
+  transform: translateY(-2px);
+}
+
+.download-btn {
+  background-color: #0288d1;
+  color: white;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.download-btn:hover {
+  background-color: #01579b;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar .right ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  .submit-button, .download-btn {
+    font-size: 0.95rem;
+  }
+}

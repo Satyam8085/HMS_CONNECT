@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electronic Health Records | HMS CONNECT</title>
+  <link rel="stylesheet" href="ehr.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="left">
+      <img src="v987-18a.jpg" alt="Logo" class="logo">
+      <h4>HMS CONNECT</h4>
+    </div>
+    <nav class="right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="ehr-section">
+      <h1 class="section-title">📋 Electronic Health Records</h1>
+      <p class="section-subtitle">Securely enter, manage, and download patient medical records.</p>
+
+      <form class="ehr-form">
+        <fieldset>
+          <legend>👤 Patient Information</legend>
+
+          <label for="patient-name">Full Name</label>
+          <input type="text" id="patient-name" name="patient-name" placeholder="Name" required />
+
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required />
+
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="contact">Contact Number</label>
+          <input type="tel" id="contact" name="contact" placeholder="10-digit mobile number" pattern="[0-9]{10}" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>📜 Medical History</legend>
+          <textarea id="history" name="history" rows="4" placeholder="Mention any allergies, surgeries, past illnesses..."></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>💊 Current Medication</legend>
+          <textarea id="medications" name="medications" rows="4" placeholder="List all prescribed or ongoing medications..."></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>🩺 Doctor's Recommendation</legend>
+          <textarea id="doctor-notes" name="doctor-notes" rows="4" placeholder="Doctor's notes, advice or follow-ups..."></textarea>
+        </fieldset>
+
+        <button type="submit" class="submit-button">💾 Save Record</button>
+      </form>
+    </section>
+
+    <section class="download-section">
+      <h2 class="section-title">⬇️ Download Patient Records</h2>
+      <form class="download-form">
+        <label for="record">Choose Patient</label>
+        <select id="record" name="record" required>
+          <option value="" disabled selected>-- Select a patient record --</option>
+          <option value="record-12345.pdf">Aatif (ID: 12345)</option>
+          <option value="record-56789.pdf">Aayush (ID: 56789)</option>
+          <option value="record-98765.pdf">Raj (ID: 98765)</option>
+        </select>
+        <button type="submit" class="download-btn">📥 Download Record</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

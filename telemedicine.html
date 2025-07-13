@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Telemedicine - HMS CONNECT</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="telemedicine.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="left">
+      <img src="v987-18a.jpg" alt="Logo" class="logo">
+      <h4>HMS CONNECT</h4>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a style="margin-right: 30px;" href="login.html">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Heading -->
+  <h1>Telemedicine Services</h1>
+  <h3>Consult with Doctors Online</h3>
+
+  <!-- Telemedicine Appointment Form -->
+  <div class="telemedicine-form-container">
+    <form action="#" method="post">
+      <table>
+        <tr>
+          <td>Patient Name:</td>
+          <td><input type="text" name="patient_name" required></td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+          <td><input type="number" name="age" min="0" required></td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>
+            <select name="gender" required>
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Preferred Doctor:</td>
+          <td><input type="text" name="preferred_doctor"></td>
+        </tr>
+        <tr>
+          <td>Specialization:</td>
+          <td>
+            <select name="specialization" required>
+              <option value="">Select</option>
+              <option>General Physician</option>
+              <option>Pediatrician</option>
+              <option>Dermatologist</option>
+              <option>Psychiatrist</option>
+              <option>Gynecologist</option>
+              <option>Cardiologist</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Date & Time:</td>
+          <td><input type="datetime-local" name="appointment_time" required></td>
+        </tr>
+        <tr>
+          <td>Symptoms / Concerns:</td>
+          <td><textarea name="symptoms" rows="3" placeholder="Describe your health concern..."></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="submit-cell">
+            <input type="submit" value="Book Appointment">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+  <!-- Doctor Schedule Display -->
+  <div class="doctor-schedule">
+    <h3>Available Doctors</h3>
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Doctor</th>
+          <th>Specialization</th>
+          <th>Available Timings</th>
+          <th>Mode</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dr. Raj Singh</td>
+          <td>General Physician</td>
+          <td>10:00 AM - 1:00 PM</td>
+          <td>Video Call</td>
+        </tr>
+        <tr>
+          <td>Dr.Atif Ahmad</td>
+          <td>Dermatologist</td>
+          <td>4:00 PM - 6:00 PM</td>
+          <td>Chat / Video</td>
+        </tr>
+        <tr>
+          <td>Dr. Harsha Singh</td>
+          <td>Psychiatrist</td>
+          <td>6:00 PM - 9:00 PM</td>
+          <td>Video Call</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 HMS CONNECT. All rights reserved.</p>
+    <p>Developed by: Satyam Singh</p>
+    <p>Contact: support@hmsconnect.com | +91 8523697418</p>
+    <p>
+      Follow us:
+      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+      <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </p>
+  </div>
+
+</body>
+</html>

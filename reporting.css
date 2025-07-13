@@ -1,0 +1,170 @@
+/* Base Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #eef2f3, #ffffff);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: #0a0202;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  height: 45px;
+  margin-right: 12px;
+}
+
+.navbar h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f7f9fa;
+}
+
+.navbar .right ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar .right ul li a {
+  text-decoration: none;
+  color: #fcfafa;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .right ul li a:hover {
+  color: #007bff;
+}
+
+/* Section Headings */
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  color: #007bff;
+  margin-top: 30px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Containers */
+.reporting-section,
+.download-section {
+  background: #fff;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Buttons */
+.generate-btn,
+.download-btn {
+  padding: 12px 18px;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.generate-btn:hover,
+.download-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Report Output */
+.report-output {
+  margin-top: 40px;
+  background: #f4f8fb;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 5px solid #007bff;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.03);
+}
+
+.report-placeholder {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #00acee;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

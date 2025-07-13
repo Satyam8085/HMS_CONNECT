@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="login.css" />
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="left">
+      <h4><a href="./index.html">HMS_CONNECT</a></h4>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="./login/login.html">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+
+  
+  <h2>ALL UNDER ONE ROOF</h2>
+
+  <div class="container">
+    <div class="form-box">
+      <h2 id="form-title">Sign In</h2>
+      <div class="social-buttons">
+        <button><i class="bx bxl-google"></i></button>
+        <button><i class="bx bxl-facebook"></i></button>
+        <button><i class="bx bxl-pinterest"></i></button>
+        <button><i class="bx bxl-linkedin"></i></button>
+      </div>
+      <p class="subtitle" id="form-subtitle">or use your email password</p>
+
+      <form id="signin-form">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <a href="#">Forgot Your Password?</a>
+        <button type="submit">SIGN IN</button>
+      </form>
+
+      <form id="signup-form" style="display: none;">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+        <button type="submit">SIGN UP</button>
+      </form>
+    </div>
+
+    <div class="right-box">
+      <h2 id="panel-heading">Hello, Friend!</h2>
+      <p id="panel-text">Register with your personal details to use all of site features</p>
+      <button id="toggle-btn">SIGN UP</button>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

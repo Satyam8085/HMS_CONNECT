@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission & Discharge | HMS CONNECT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Admission.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="left">
+      <img src="v987-18a.jpg" alt="Logo" class="logo">
+      <h4>HMS CONNECT</h4>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a style="margin-right: 30px;" href="login.html">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Form Content -->
+  <main class="flex-grow container mx-auto p-6 md:p-8 lg:p-12">
+    <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8 md:mb-12">Admission & Discharge Form</h1>
+
+    <form class="bg-white p-6 md:p-8 lg:p-10 rounded-xl shadow-2xl border border-gray-200 max-w-3xl mx-auto space-y-8">
+      
+      <!-- Patient Information -->
+      <fieldset class="space-y-4">
+        <legend class="text-xl font-semibold text-gray-700 mb-4 border-b pb-2">Patient Information</legend>
+
+        <div>
+          <label for="patient-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+          <input type="text" id="patient-name" name="patientName" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
+            <input type="number" id="age" name="age" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+          </div>
+
+          <div>
+            <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+            <select id="gender" name="gender" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+              <option value="" disabled selected>Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700">Contact Number</label>
+          <input type="tel" id="phone" name="phone" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div>
+          <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+          <textarea id="address" name="address" required rows="3" class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Admission Details -->
+      <fieldset class="space-y-4">
+        <legend class="text-xl font-semibold text-gray-700 mb-4 border-b pb-2">Admission Details</legend>
+
+        <div>
+          <label for="admission-date" class="block text-sm font-medium text-gray-700">Admission Date</label>
+          <input type="date" id="admission-date" name="admissionDate" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div>
+          <label for="department" class="block text-sm font-medium text-gray-700">Department</label>
+          <select id="department" name="department" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            <option value="" disabled selected>Select Department</option>
+            <option>General Medicine</option>
+            <option>Pediatrics</option>
+            <option>Orthopedics</option>
+            <option>Cardiology</option>
+            <option>Neurology</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="room" class="block text-sm font-medium text-gray-700">Room/Ward Number</label>
+          <input type="text" id="room" name="room" required class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+      </fieldset>
+
+      <!-- Discharge Details -->
+      <fieldset class="space-y-4">
+        <legend class="text-xl font-semibold text-gray-700 mb-4 border-b pb-2">Discharge Details</legend>
+
+        <div>
+          <label for="discharge-date" class="block text-sm font-medium text-gray-700">Discharge Date</label>
+          <input type="date" id="discharge-date" name="dischargeDate" class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div>
+          <label for="remarks" class="block text-sm font-medium text-gray-700">Remarks / Diagnosis Summary</label>
+          <textarea id="remarks" name="remarks" rows="3" class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+        <i class="fas fa-paper-plane mr-2"></i> Submit Form
+      </button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-6 mt-10 shadow-inner">
+    <div class="container mx-auto text-center text-sm md:text-base">
+      <p class="mb-2">&copy; 2025 HMS CONNECT. All rights reserved.</p>
+      <p class="mb-2">Developed by: Satyam Singh | <a href="mailto:support@hmsconnect.com" class="text-blue-400 hover:underline">support@hmsconnect.com</a> | +91 8523697418</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="https://www.facebook.com" target="_blank" class="text-blue-400 hover:text-blue-200 transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+        <a href="https://www.twitter.com" target="_blank" class="text-blue-400 hover:text-blue-200 transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+        <a href="https://www.instagram.com" target="_blank" class="text-blue-400 hover:text-blue-200 transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+        <a href="https://www.linkedin.com" target="_blank" class="text-blue-400 hover:text-blue-200 transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

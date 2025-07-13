@@ -1,0 +1,84 @@
+.feedback-section {
+  padding: 50px 20px;
+  background: #f9fafb;
+}
+
+.feedback-container {
+  max-width: 700px;
+  background: #fff;
+  margin: auto;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.feedback-form label {
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  font-size: 15px;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+}
+
+.emoji-rating {
+  font-size: 26px;
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.emoji-rating input {
+  display: none;
+}
+
+.emoji-rating label {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.emoji-rating input:checked + label {
+  transform: scale(1.4);
+}
+
+.submit-button {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}

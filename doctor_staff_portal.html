@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor & Staff Portal | HMS CONNECT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="doctor_staff_portal.css"> 
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <div class="navbar">
+    <div class="left">
+      <img src="v987-18a.jpg" alt="Logo" class="logo">
+      <h4 class="text-xl font-bold">HMS CONNECT</h4>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="flex-grow container mx-auto p-6 md:p-10 lg:p-12">
+    <h1 class="main-heading">Doctor & Staff Portal</h1>
+
+    <section class="form-container max-w-3xl mx-auto space-y-8">
+      <form id="doctorPortalForm" class="space-y-6">
+        
+        <div>
+          <h2 class="section-heading">Staff / Doctor Information</h2>
+          <label for="staffName">Full Name:</label>
+          <input type="text" id="staffName" name="staffName" required class="input-style" placeholder="Dr. John Doe / Nurse Asha">
+
+          <label for="staffId">Staff ID:</label>
+          <input type="text" id="staffId" name="staffId" required class="input-style" placeholder="e.g., DID-9876">
+
+          <label for="role">Role:</label>
+          <select id="role" name="role" class="input-style">
+            <option>Doctor</option>
+            <option>Nurse</option>
+            <option>Technician</option>
+            <option>Admin Staff</option>
+          </select>
+
+          <label for="department">Department:</label>
+          <input type="text" id="department" name="department" class="input-style" placeholder="e.g., Cardiology">
+        </div>
+
+        <div>
+          <h2 class="section-heading">Manage Schedule</h2>
+          <label for="scheduleDate">Select Date:</label>
+          <input type="date" id="scheduleDate" name="scheduleDate" class="input-style">
+
+          <label for="shift">Shift Timings:</label>
+          <input type="text" id="shift" name="shift" class="input-style" placeholder="e.g., 9 AM - 5 PM">
+        </div>
+
+        <div>
+          <h2 class="section-heading">Search Patient Records</h2>
+          <label for="searchPatientId">Patient ID:</label>
+          <input type="text" id="searchPatientId" name="searchPatientId" class="input-style" placeholder="PID-12345">
+
+          <label for="notes">Doctor's Notes:</label>
+          <textarea id="notes" name="notes" rows="4" class="input-style resize-none" placeholder="Add observations, treatment suggestions..."></textarea>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-6">
+          <button type="submit" class="btn-primary"><i class="fas fa-save mr-2"></i> Save Entry</button>
+          <button type="button" class="btn-secondary"><i class="fas fa-eye mr-2"></i> View Patient</button>
+          <button type="reset" class="btn-warning"><i class="fas fa-undo mr-2"></i> Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white p-6 mt-10 shadow-inner">
+    <div class="container mx-auto text-center text-sm md:text-base">
+      <p class="mb-2">&copy; 2025 HMS CONNECT. All rights reserved.</p>
+      <p>Developed by: Satyam Singh |
+        <a href="mailto:support@hmsconnect.com" class="text-blue-400 hover:underline">support@hmsconnect.com</a> | +91 8523697418
+      </p>
+      <div class="flex justify-center space-x-4 mt-4 social-icons">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f text-xl hover:text-blue-300"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter text-xl hover:text-blue-300"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram text-xl hover:text-pink-300"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in text-xl hover:text-blue-300"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

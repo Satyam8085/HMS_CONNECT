@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Hospital Management System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(to bottom right, #e6f7ff, #cceeff);
+      padding-top: 70px;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      background-color: black;
+      color: beige;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      border: 3px solid black;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .navbar .left h4 {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .navbar .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    .navbar ul li a {
+      color: beige;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: aqua;
+      transform: scale(1.1);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .bar {
+      height: 3px;
+      width: 25px;
+      background-color: beige;
+      margin: 3px 0;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px 20px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .navbar .right {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      .navbar .right ul {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .navbar .right ul li {
+        margin: 10px 0;
+      }
+
+      .navbar.active .right {
+        display: flex;
+      }
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .about-section {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .about-header h1 {
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    .welcome-block {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .welcome-block h2 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .welcome-block p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .about-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .about-block {
+      flex: 1 1 300px;
+      min-width: 280px;
+    }
+
+    .about-block h2 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .about-block p,
+    .about-block ul {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .core-values ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .core-values li {
+      margin-bottom: 10px;
+    }
+
+    .core-values li strong {
+      color: #2c3e50;
+    }
+
+    @media (max-width: 768px) {
+      .about-columns {
+        flex-direction: column;
+      }
+
+      .about-header h1 {
+        font-size: 2rem;
+      }
+
+      .welcome-block h2 {
+        font-size: 1.6rem;
+      }
+
+      .about-block h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar" id="navbar">
+    <div class="left">
+      <h4>HMS CONNECT</h4>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="about-section">
+    <div class="container">
+      <div class="about-header">
+        <h1>About Us</h1>
+      </div>
+
+      <div class="welcome-block">
+        <h2>Welcome to [Hospital Name]</h2>
+        <p>At [Hospital Name], we are committed to providing high-quality medical care in a compassionate and safe environment. Our dedicated team of healthcare professionals works tirelessly to meet the needs of our patients and ensure their well-being.</p>
+      </div>
+
+      <div class="about-columns">
+        <div class="about-block">
+          <h2>Our Mission</h2>
+          <p>Our mission is to provide exceptional healthcare that is affordable, accessible, and patient-centered. We aim to continuously improve the health of the individuals and communities we serve, using state-of-the-art technology and evidence-based medical practices.</p>
+        </div>
+
+        <div class="about-block">
+          <h2>Our Vision</h2>
+          <p>To be recognized as a world-class healthcare provider known for delivering innovative, comprehensive, and personalized care. We strive to set the standard for excellence in healthcare, fostering a culture of compassion, integrity, and teamwork.</p>
+        </div>
+
+        <div class="about-block core-values">
+          <h2>Our Core Values</h2>
+          <ul>
+            <li><strong>Compassion:</strong> We treat every patient with care, empathy, and respect.</li>
+            <li><strong>Excellence:</strong> We strive for the highest standards of care, performance, and professionalism.</li>
+            <li><strong>Integrity:</strong> We act with honesty and transparency in all our dealings.</li>
+            <li><strong>Innovation:</strong> We embrace the latest technologies and practices to improve care delivery.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

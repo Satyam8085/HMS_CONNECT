@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventory Management - HMS CONNECT</title>
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="inventory.css"> 
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="left">
+      <img src="v987-18a.jpg" alt="Logo" class="logo">
+      <h4>HMS CONNECT</h4>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a style="margin-right: 30px;" href="login.html">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Heading -->
+  <h1>Inventory Management</h1>
+  <h3>Add or Update Hospital Inventory</h3>
+
+  <!-- Inventory Form -->
+  <div class="inventory-form-container">
+    <form action="#" method="post">
+      <table>
+        <tr>
+          <td>Item Name:</td>
+          <td><input type="text" name="item_name" required></td>
+        </tr>
+        <tr>
+          <td>Category:</td>
+          <td>
+            <select name="category" required>
+              <option value="">Select</option>
+              <option>Medical Equipment</option>
+              <option>Pharmaceuticals</option>
+              <option>Sanitary Supplies</option>
+              <option>General Supplies</option>
+              <option>Lab Consumables</option>
+              <option>Protective Gear</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Quantity:</td>
+          <td><input type="number" name="quantity" min="1" required></td>
+        </tr>
+        <tr>
+          <td>Unit Price (₹):</td>
+          <td><input type="number" name="unit_price" step="0.01" required></td>
+        </tr>
+        <tr>
+          <td>Supplier Name:</td>
+          <td><input type="text" name="supplier_name"></td>
+        </tr>
+        <tr>
+          <td>Date of Purchase:</td>
+          <td><input type="date" name="purchase_date"></td>
+        </tr>
+        <tr>
+          <td>Expiry Date:</td>
+          <td><input type="date" name="expiry_date"></td>
+        </tr>
+        <tr>
+          <td>Remarks:</td>
+          <td><textarea name="remarks" rows="3"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="submit-cell">
+            <input type="submit" value="Save Inventory Item">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+  <!-- Inventory Management Options -->
+  <div class="inventory-controls">
+    <h3>Inventory Records</h3>
+
+    <div class="filters">
+      <input type="text" placeholder="Search by item name...">
+      <select>
+        <option value="">Filter by Category</option>
+        <option>Medical Equipment</option>
+        <option>Pharmaceuticals</option>
+        <option>Sanitary Supplies</option>
+        <option>General Supplies</option>
+        <option>Lab Consumables</option>
+      </select>
+      <select>
+        <option value="">Sort By</option>
+        <option>Newest</option>
+        <option>Oldest</option>
+        <option>Quantity (Low to High)</option>
+        <option>Quantity (High to Low)</option>
+      </select>
+      <button>Export to CSV</button>
+    </div>
+
+    <!-- Inventory Table -->
+    <table class="inventory-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Category</th>
+          <th>Qty</th>
+          <th>Unit Price</th>
+          <th>Supplier</th>
+          <th>Purchase Date</th>
+          <th>Expiry Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Gloves</td>
+          <td>Protective Gear</td>
+          <td>500</td>
+          <td>₹5</td>
+          <td>Medico Supply</td>
+          <td>2025-06-01</td>
+          <td>2026-06-01</td>
+          <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Syringes</td>
+          <td>Medical Equipment</td>
+          <td>1000</td>
+          <td>₹2.50</td>
+          <td>SafeMeds Ltd.</td>
+          <td>2025-05-15</td>
+          <td>2028-05-15</td>
+          <td>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 HMS CONNECT. All rights reserved.</p>
+    <p>Developed by: Satyam Singh</p>
+    <p>Contact: support@hmsconnect.com | +91 8523697418</p>
+    <p>
+      Follow us:
+      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+      <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </p>
+  </div>
+
+</body>
+</html>

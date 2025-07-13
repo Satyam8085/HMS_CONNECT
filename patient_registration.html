@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Registration - HMS CONNECT</title>
+  <link rel="stylesheet" href="style.css"> <!-- same CSS as index.html -->
+  <link rel="stylesheet" href="patient_registration.css"> <!-- if you need extra styling -->
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="left">
+      <img src="v987-18a.jpg" alt="Logo" class="logo">
+      <h4>HMS CONNECT</h4>
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a style="margin-right: 30px;" href="login.html">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h1 align="center">Patient Registration</h1>
+  <h3 align="center">Please fill in the details below</h3>
+
+  <form action="#" method="post" align="center">
+    <table align="center" cellpadding="10">
+      <tr>
+        <td>Full Name:</td>
+        <td><input type="text" name="fullname" required></td>
+      </tr>
+      <tr>
+        <td>Age:</td>
+        <td><input type="number" name="age" required></td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <select name="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Contact Number:</td>
+        <td><input type="tel" name="contact" required></td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><input type="email" name="email"></td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td><textarea name="address" rows="3" cols="30" required></textarea></td>
+      </tr>
+      <tr>
+        <td>Symptoms / Reason for Visit:</td>
+        <td><textarea name="symptoms" rows="3" cols="30" required></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="Register Patient">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <hr>
+  <div align="center">
+    <p>&copy; 2025 HMS CONNECT. All rights reserved.</p>
+    <p>Developed by: Satyam Singh</p>
+    <p>Contact: support@hmsconnect.com | +91 7896541230</p>
+    <p>
+      Follow us:
+      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+      <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </p>
+  </div>
+
+</body>
+</html>
