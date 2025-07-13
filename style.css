@@ -318,106 +318,76 @@ footer a:hover {
   transform: scale(1.1);
 }
 /* ========== MOBILE VIEW ONLY ========== */
+/* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    padding: 0 10px;
-  }
-
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
-    padding: 10px;
-    font-size: 14px;
+    padding: 12px 16px;
+    gap: 10px;
   }
 
   .right ul {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    margin-top: 10px;
+    padding-left: 0;
   }
 
   .right ul li {
-    margin: 8px 0;
+    width: 100%;
+    margin: 6px 0;
   }
 
   .right ul li a {
-    font-size: 14px;
-  }
-
-  .logo {
-    height: 25px;
-    margin-bottom: 10px;
-  }
-
-  .company {
-    font-size: 30px;
-  }
-
-  .sologon {
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
-
-  .mincard {
-    grid-template-columns: 1fr;
+    display: block;
+    width: 100%;
     padding: 10px;
-    gap: 15px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
   }
 
-  .card {
-    height: auto;
-    padding: 20px;
-    font-size: 16px;
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 20px;
   }
 
-  .assistant-container {
-    margin: 20px 10px;
-    max-width: 100%;
-    flex-direction: column;
+  h3 {
+    font-size: 1.1rem;
+    margin: 15px 0;
   }
 
-  .assistant-header h2 {
-    font-size: 1.2rem;
+  form {
+    width: 92%;
+    padding: 24px;
+    margin: 0 auto;
   }
 
-  .chat-area {
-    height: 150px;
-    font-size: 0.9rem;
-  }
-
-  .assistant-footer {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .assistant-footer input {
-    font-size: 1rem;
+  form td {
+    display: block;
     width: 100%;
+    padding: 10px 0;
   }
 
-  .ask-button {
+  form td input,
+  form td select,
+  form td textarea {
     width: 100%;
+    margin-top: 6px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 12px;
     font-size: 1rem;
   }
 
-  footer {
-    padding: 20px 5%;
-  }
-
-  .footer-content p,
-  footer p,
-  footer a {
-    font-size: 0.85rem;
-  }
-
-  footer p:first-child {
-    font-size: 1rem;
-  }
-
-  footer p:last-child {
-    font-size: 0.9rem;
+  footer,
+  div[align="center"]:last-of-type {
+    padding: 20px 10px;
+    font-size: 13px;
   }
 }
