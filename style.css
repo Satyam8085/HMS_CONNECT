@@ -318,7 +318,7 @@ footer a:hover {
   transform: scale(1.1);
 }
 /* ========== MOBILE VIEW ONLY ========== */
-/* Enhanced Mobile Responsive Styles */
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -390,4 +390,4 @@ footer a:hover {
     padding: 20px 10px;
     font-size: 13px;
   }
-}
+} 
