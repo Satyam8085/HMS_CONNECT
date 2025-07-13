@@ -321,19 +321,21 @@ footer a {
 footer a:hover {
   transform: scale(1.1);
 }
-/* ========== MOBILE VIEW ONLY ========== */
+/*MOBILE RESPONSIVENESS  */
 @media (max-width: 768px) {
   body {
-    font-size: 14px;
-    padding: 0 10px;
+    font-size: 15px;
+    padding: 0 12px;
+    background-size: 300% 300%;
   }
 
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
-    padding: 10px;
+    padding: 10px 15px;
     font-size: 14px;
+    border-radius: 0 0 10px 10px;
   }
 
   .right ul {
@@ -348,21 +350,24 @@ footer a:hover {
   }
 
   .right ul li a {
-    font-size: 14px;
+    font-size: 15px;
+    display: block;
+    padding: 6px 0;
   }
 
   .logo {
-    height: 25px;
-    margin-bottom: 10px;
+    height: 24px;
+    margin: 5px 0;
   }
 
   .company {
-    font-size: 30px;
+    font-size: 28px;
+    margin-top: 15px;
   }
 
   .sologon {
-    font-size: 20px;
-    letter-spacing: 1px;
+    font-size: 18px;
+    margin: 10px 0 20px;
   }
 
   .mincard {
@@ -373,23 +378,26 @@ footer a:hover {
 
   .card {
     height: auto;
+    min-height: 180px;
     padding: 20px;
-    font-size: 16px;
+    font-size: 15px;
+    text-align: center;
   }
 
   .assistant-container {
-    margin: 20px 10px;
-    max-width: 100%;
+    margin: 20px 0;
+    width: 100%;
     flex-direction: column;
+    border-radius: 10px;
   }
 
   .assistant-header h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .chat-area {
-    height: 150px;
-    font-size: 0.9rem;
+    height: 180px;
+    font-size: 0.95rem;
   }
 
   .assistant-footer {
@@ -398,23 +406,26 @@ footer a:hover {
   }
 
   .assistant-footer input {
-    font-size: 1rem;
     width: 100%;
+    font-size: 1rem;
   }
 
   .ask-button {
     width: 100%;
     font-size: 1rem;
+    padding: 0.5rem;
   }
 
   footer {
     padding: 20px 5%;
+    text-align: center;
   }
 
   .footer-content p,
   footer p,
   footer a {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    text-align: center;
   }
 
   footer p:first-child {
