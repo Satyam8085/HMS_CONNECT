@@ -75,7 +75,8 @@ main {
   margin-bottom: 30px;
 }
 
-.ehr-form, .download-form {
+.ehr-form,
+.download-form {
   background: #fff;
   padding: 25px 30px;
   border-radius: 15px;
@@ -174,7 +175,8 @@ button {
     padding: 20px 10px;
   }
 
-  .submit-button, .download-btn {
+  .submit-button,
+  .download-btn {
     font-size: 0.95rem;
   }
 }
