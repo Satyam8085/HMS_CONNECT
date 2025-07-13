@@ -13,6 +13,7 @@
       <img src="v987-18a.jpg" alt="Logo" class="logo">
       <h4>HMS CONNECT</h4>
     </div>
+    <button class="toggle-button" onclick="toggleNavbar()">☰</button>
     <div class="right">
       <ul>
         <li><a href="index.html">HOME</a></li>
@@ -68,5 +69,12 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+  function toggleNavbar() {
+    const nav = document.querySelector('.right');
+    nav.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
