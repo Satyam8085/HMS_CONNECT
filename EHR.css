@@ -32,6 +32,15 @@ body {
   gap: 10px;
 }
 
+.navbar .logo {
+  height: 30px;
+  margin-right: 1rem;
+  border-radius: 20%;
+  object-fit: cover;
+  
+}
+
+
 .navbar h4 {
   font-size: 1.2rem;
   font-weight: bold;
@@ -75,8 +84,7 @@ main {
   margin-bottom: 30px;
 }
 
-.ehr-form,
-.download-form {
+.ehr-form, .download-form {
   background: #fff;
   padding: 25px 30px;
   border-radius: 15px;
@@ -175,8 +183,7 @@ button {
     padding: 20px 10px;
   }
 
-  .submit-button,
-  .download-btn {
+  .submit-button, .download-btn {
     font-size: 0.95rem;
   }
 }
