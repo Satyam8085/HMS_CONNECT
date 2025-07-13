@@ -152,3 +152,82 @@ footer {
   text-decoration: underline;
   color: #60a5fa;
 }
+/* Mobile Responsive Styles */
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    position: static; 
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 12px 16px;
+    gap: 10px;
+    background-color: black;
+    z-index: auto;
+  }
+}
+
+
+  .right ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .right ul li {
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  .right ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin: 15px 0;
+  }
+
+  form {
+    width: 92%;
+    padding: 24px;
+    margin: 0 auto;
+  }
+
+  form td {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  form td input,
+  form td select,
+  form td textarea {
+    width: 100%;
+    margin-top: 6px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  footer,
+  div[align="center"]:last-of-type {
+    padding: 20px 10px;
+    font-size: 13px;
+  }
+}
