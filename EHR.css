@@ -32,15 +32,6 @@ body {
   gap: 10px;
 }
 
-.navbar .logo {
-  height: 30px;
-  margin-right: 1rem;
-  border-radius: 20%;
-  object-fit: cover;
-  
-}
-
-
 .navbar h4 {
   font-size: 1.2rem;
   font-weight: bold;
