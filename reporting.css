@@ -54,8 +54,42 @@ body {
   transition: color 0.3s;
 }
 
-.navbar .right ul li a:hover {
-  color: #007bff;
+.right a:hover {
+  color: aqua;
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.2);
+  box-shadow: 0 0 10px yellow;
+}
+
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.dark-mode .about-section {
+  background-color: #2a2a2a;
+  box-shadow: none;
+}
+
+.dark-mode .about-section h1,
+.dark-mode .about-section h2,
+.dark-mode .core-values ul li strong {
+  color: #4ecdc4;
+}
+
+.dark-mode .core-values ul li {
+  color: #ccc;
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Section Headings */
