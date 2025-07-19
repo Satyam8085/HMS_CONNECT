@@ -119,3 +119,160 @@ body {
     font-size: 14px;
   }
 }
+
+#admissionPopup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-box {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  max-width: 400px;
+  width: 90%;
+}
+
+.popup-box h2 {
+  color: #10b981;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.popup-box p {
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.popup-box button {
+  padding: 12px 24px;
+  background: #10b981;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.popup-box button:hover {
+  background: #0f766e;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+#discharge-receipt {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.receipt-box {
+  background: #ffffff;
+  color: #333333;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.receipt-box h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.receipt-box hr {
+  border: none;
+  border-top: 2px dashed #bbb;
+  margin: 20px 0;
+}
+
+.receipt-box p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.receipt-box p strong {
+  color: #000;
+}
+
+.receipt-box .print-btn {
+  margin-top: 30px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s ease;
+}
+
+.receipt-box .print-btn:hover {
+  background-color: #0056b3;
+}
+
+.receipt-footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #666;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #discharge-receipt,
+  #discharge-receipt * {
+    visibility: visible;
+  }
+
+  #discharge-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .print-btn {
+    display: none;
+  }
+
+  .receipt-box {
+    box-shadow: none;
+    border: none;
+  }
+}

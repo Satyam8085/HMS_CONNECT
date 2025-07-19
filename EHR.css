@@ -187,3 +187,24 @@ button {
     font-size: 0.95rem;
   }
 }
+
+.popup-message {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0f5132;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  font-size: 1rem;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.popup-message.show {
+  bottom: 30px;
+  opacity: 1;
+}
+

@@ -199,3 +199,51 @@ footer a:hover, div[align="center"] a:hover {
   text-decoration: underline;
   color: #60a5fa;
 }
+
+/* Popup Styling */
+#successPopup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+}
+
+.popup-box h2 {
+  color: #2e8b57;
+  margin-bottom: 15px;
+}
+
+.popup-box p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.popup-box button {
+  padding: 10px 20px;
+  background: #2e8b57;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popup-box button:hover {
+  background: #246b45;
+}

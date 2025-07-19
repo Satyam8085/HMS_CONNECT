@@ -85,4 +85,70 @@
   </div>
 
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+
+  const popup = document.createElement("div");
+  popup.id = "successPopup";
+  popup.innerHTML = `
+    <div class="popup-box">
+      <h2>Registration Successful 🎉</h2>
+      <p>Patient has been successfully registered.</p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  `;
+  document.body.appendChild(popup);
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const fullName = form.fullname.value.trim();
+    const age = form.age.value.trim();
+    const gender = form.gender.value;
+    const contact = form.contact.value.trim();
+    const address = form.address.value.trim();
+    const symptoms = form.symptoms.value.trim();
+
+    if (!fullName || !age || !gender || !contact || !address || !symptoms) {
+      alert("Please fill out all required fields.");
+      return;
+    }
+
+    if (!/^\d{10}$/.test(contact)) {
+      alert("Please enter a valid 10-digit contact number.");
+      return;
+    }
+
+    const patientData = {
+      fullName,
+      age,
+      gender,
+      contact,
+      email: form.email.value.trim(),
+      address,
+      symptoms,
+    };
+    localStorage.setItem("lastRegisteredPatient", JSON.stringify(patientData));
+
+    showPopup();
+
+    setTimeout(() => {
+      form.reset();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 1000);
+  });
+});
+
+function showPopup() {
+  const popup = document.getElementById("successPopup");
+  popup.style.display = "flex";
+}
+
+function closePopup() {
+  const popup = document.getElementById("successPopup");
+  popup.style.display = "none";
+}
+
+</script>
 </html>
