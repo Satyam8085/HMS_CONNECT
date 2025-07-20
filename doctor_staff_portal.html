@@ -95,4 +95,80 @@
     </div>
   </footer>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('doctorPortalForm');
+    const buttons = form.querySelectorAll('button');
+    const saveBtn = buttons[0];
+    const viewBtn = buttons[1];
+    const resetBtn = buttons[2];
+    const staffName = document.getElementById('staffName');
+    const staffId = document.getElementById('staffId');
+    const patientIdInput = document.getElementById('searchPatientId');
+    const notes = document.getElementById('notes');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = staffName.value.trim();
+      const id = staffId.value.trim();
+
+      if (!name || !id) {
+        alert("Please fill in both Staff Name and ID.");
+        return;
+      }
+
+      if (!/^DID-\d+$/.test(id)) {
+        alert("Invalid Staff ID. Use format: DID-1234");
+        staffId.focus();
+        return;
+      }
+
+      if (confirm(`Save schedule and notes for ${name} (${id})?`)) {
+        setTimeout(() => {
+          alert("✅ Entry saved successfully.");
+          form.reset();
+        }, 300);
+      }
+    });
+
+    resetBtn.addEventListener('click', (e) => {
+      if (!confirm("Are you sure you want to reset the form?")) {
+        e.preventDefault();
+      }
+    });
+
+    viewBtn.addEventListener('click', () => {
+      const pid = patientIdInput.value.trim();
+
+      if (!pid) {
+        alert("Please enter a Patient ID to view records.");
+        return;
+      }
+
+      if (!/^PID-\d+$/.test(pid)) {
+        alert("Invalid Patient ID. Use format: PID-12345");
+        patientIdInput.focus();
+        return;
+      }
+
+      alert(`📋 Patient Record for ${pid}\n\n• Name: Ravi Kumar\n• Age: 42\n• Condition: Hypertension\n• Last Visit: 12 July 2025\n• Prescribed by: Dr. Sharma`);
+    });
+
+    patientIdInput.addEventListener('blur', () => {
+      const pid = patientIdInput.value.trim();
+      if (pid && !/^PID-\d+$/.test(pid)) {
+        alert("❗ Invalid Patient ID format. Use PID-12345");
+        patientIdInput.focus();
+      }
+    });
+
+    staffId.addEventListener('blur', () => {
+      const id = staffId.value.trim();
+      if (id && !/^DID-\d+$/.test(id)) {
+        alert("❗ Invalid Staff ID format. Use DID-1234");
+        staffId.focus();
+      }
+    });
+  });
+</script>
 </html>

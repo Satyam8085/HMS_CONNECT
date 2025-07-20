@@ -89,7 +89,100 @@
       </p>
     </div>
   </footer>
-
 </body>
-<script src="main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".feedback-form");
+  const chatArea = document.querySelector(".chat-area");
+  const askInput = document.querySelector(".assistant-footer input");
+  const askButton = document.querySelector(".ask-button");
+
+  // Handle form submission
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+    const rating = document.querySelector('input[name="rating"]:checked');
+    const ratingEmoji = rating ? rating.nextElementSibling.textContent : "Not Rated";
+
+    const feedbackRecord = {
+      name,
+      subject,
+      message,
+      rating: ratingEmoji,
+      time: new Date().toLocaleString()
+    };
+
+    // Save to localStorage
+    let records = JSON.parse(localStorage.getItem("feedbackRecords")) || [];
+    records.push(feedbackRecord);
+    localStorage.setItem("feedbackRecords", JSON.stringify(records));
+
+    showPopup(`✅ Thank you, <strong>${name}</strong>!<br>Your feedback has been submitted.`);
+
+    form.reset();
+  });
+
+  // Live assistant interaction
+  askButton.addEventListener("click", () => {
+    const query = askInput.value.trim();
+    if (!query) return;
+
+    const userMsg = document.createElement("div");
+    userMsg.className = "message user-msg";
+    userMsg.textContent = query;
+    chatArea.appendChild(userMsg);
+
+    const assistantMsg = document.createElement("div");
+    assistantMsg.className = "message assistant-msg";
+
+    const response = generateResponse(query);
+    assistantMsg.innerHTML = response;
+    chatArea.appendChild(assistantMsg);
+
+    askInput.value = "";
+    chatArea.scrollTop = chatArea.scrollHeight;
+  });
+
+  // Show stored feedback
+  const viewButton = document.createElement("button");
+  viewButton.textContent = "📋 View My Feedback";
+  viewButton.className = "view-records-button";
+  form.appendChild(viewButton);
+
+  viewButton.addEventListener("click", () => {
+    const records = JSON.parse(localStorage.getItem("feedbackRecords")) || [];
+    if (records.length === 0) return showPopup("⚠️ No feedback found.");
+
+    let content = `<h3>📋 Your Feedback History</h3><ul style="text-align:left;">`;
+    records.forEach((rec, i) => {
+      content += `<li><strong>${rec.time}</strong>: ${rec.subject} - ${rec.rating}</li>`;
+    });
+    content += "</ul>";
+    showPopup(content);
+  });
+
+  function generateResponse(query) {
+    const q = query.toLowerCase();
+    if (q.includes("login")) return "🔐 Please visit the Login page or reset your password if needed.";
+    if (q.includes("contact")) return "📞 You can reach us at support@hmsconnect.com.";
+    if (q.includes("feedback")) return "💡 We value your feedback! You can submit it using the form above.";
+    return "🤖 I'm here to help! Please be more specific with your question.";
+  }
+
+  function showPopup(content) {
+    const modal = document.createElement("div");
+    modal.className = "popup-modal";
+    modal.innerHTML = `
+      <div class="popup-content">
+        ${content}
+        <button class="popup-close">Close</button>
+      </div>`;
+    document.body.appendChild(modal);
+    document.querySelector(".popup-close").onclick = () => modal.remove();
+  }
+});
+</script>
 </html>

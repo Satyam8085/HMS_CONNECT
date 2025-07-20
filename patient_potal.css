@@ -275,3 +275,8 @@ footer .social-icons a:hover {
 footer .social-icons i {
   font-size: 1.75rem;
 }
+
+/* Optional popup enhancements */
+input:invalid {
+  border-color: red;
+}

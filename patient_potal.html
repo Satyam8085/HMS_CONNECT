@@ -101,4 +101,63 @@
     </div>
   </footer>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('patientPortalForm');
+    const buttons = form.querySelectorAll('button');
+    const saveBtn = buttons[0];
+    const viewBtn = buttons[1];
+    const resetBtn = buttons[2];
+    const prescriptionInput = document.getElementById('prescriptionPatientId');
+    const reportsInput = document.getElementById('reports');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('patientName').value;
+      const id = document.getElementById('patientId').value;
+      if (!name || !id) {
+        alert("Please fill out required fields.");
+        return;
+      }
+      if (confirm(`Are you sure you want to save info for ${name} (${id})?`)) {
+        setTimeout(() => {
+          alert("✅ Patient information saved successfully!");
+          form.reset();
+        }, 500);
+      }
+    });
+
+    resetBtn.addEventListener('click', (e) => {
+      if (!confirm("Are you sure you want to reset the form?")) e.preventDefault();
+    });
+
+    viewBtn.addEventListener('click', () => {
+      const pid = prescriptionInput.value.trim();
+      if (!pid) {
+        alert("Please enter Patient ID to view records.");
+        return;
+      }
+      if (!/^PID-\d+$/.test(pid)) {
+        alert("❗ Invalid Patient ID format. Use format: PID-12345");
+        return;
+      }
+      alert(`📋 Showing records for Patient ID: ${pid}\n\n• Blood Report: Normal\n• Last Visit: 15 July 2025\n• Doctor: Dr. Sharma`);
+    });
+
+    prescriptionInput.addEventListener('blur', () => {
+      const value = prescriptionInput.value.trim();
+      if (value && !/^PID-\d+$/.test(value)) {
+        alert("❗ Invalid Patient ID format. Use format: PID-12345");
+        prescriptionInput.focus();
+      }
+    });
+
+    reportsInput.addEventListener('change', () => {
+      const file = reportsInput.files[0];
+      if (file) {
+        alert(`📄 File "${file.name}" selected for upload.`);
+      }
+    });
+  });
+</script>
 </html>

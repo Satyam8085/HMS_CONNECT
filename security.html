@@ -108,6 +108,58 @@
       </p>
     </div>
   </footer>
-
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Handle form submission with confirmation popup
+  const reportForm = document.querySelector(".report-form");
+  reportForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const issue = document.getElementById("type").value;
+
+    showPopup(`✅ Thank you, ${name}!<br>Your ${issue} has been submitted successfully.`);
+    reportForm.reset();
+  });
+
+  // Handle download/resource link simulation
+  document.querySelectorAll(".resource-links a").forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const file = link.textContent;
+      showPopup(`📄 Download started for: <strong>${file}</strong>`);
+    });
+  });
+
+  // View Record: Show updates popup
+  const latestUpdatesLink = [...document.querySelectorAll(".resource-links a")]
+    .find(link => link.textContent.includes("View Latest Security Updates"));
+    
+  latestUpdatesLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const updates = `
+      <ul style="text-align:left;">
+        <li>🛡️ 12 Jul 2025: Firewall upgrade implemented.</li>
+        <li>🔐 05 Jul 2025: Password policy updated.</li>
+        <li>📣 29 Jun 2025: Staff trained on new data handling SOPs.</li>
+      </ul>
+    `;
+    showPopup(`📢 <strong>Latest Security Updates:</strong>${updates}`);
+  });
+
+  // Basic popup modal handler
+  function showPopup(content) {
+    let modal = document.createElement("div");
+    modal.className = "popup-modal";
+    modal.innerHTML = `
+      <div class="popup-content">
+        ${content}
+        <button class="popup-close">Close</button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    document.querySelector(".popup-close").onclick = () => modal.remove();
+  }
+});
+</script>
 </html>

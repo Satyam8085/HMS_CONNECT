@@ -83,6 +83,124 @@
       </p>
     </div>
   </footer>
-
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const reportForm = document.querySelector('.report-filters form');
+    const reportOutput = document.querySelector('.report-placeholder');
+    const downloadForm = document.querySelector('.download-form');
+    const reportSelect = document.getElementById('report-download');
+
+    // Sample dummy data (could be replaced with real API data)
+    const sampleReports = {
+      patients: [
+        { name: 'John Doe', date: '2025-07-15', type: 'Emergency' },
+        { name: 'Aarav Mehta', date: '2025-07-16', type: 'Routine' },
+      ],
+      appointments: [
+        { patient: 'Sanya', doctor: 'Dr. Raj', date: '2025-07-18', status: 'Completed' },
+        { patient: 'Ravi', doctor: 'Dr. Harsha', date: '2025-07-19', status: 'Pending' },
+      ],
+      billing: [
+        { invoice: 'INV102', patient: 'Aman', total: '₹2500', status: 'Paid' },
+        { invoice: 'INV103', patient: 'Neha', total: '₹1200', status: 'Unpaid' },
+      ],
+      inventory: [
+        { item: 'Paracetamol', used: '200 units', date: '2025-07-10' },
+        { item: 'Syringes', used: '120 units', date: '2025-07-12' },
+      ],
+    };
+
+    function showToast(msg, type = 'success') {
+      const toast = document.createElement('div');
+      toast.textContent = msg;
+      toast.style.position = 'fixed';
+      toast.style.bottom = '20px';
+      toast.style.left = '50%';
+      toast.style.transform = 'translateX(-50%)';
+      toast.style.background = type === 'success' ? '#22c55e' : '#ef4444';
+      toast.style.color = 'white';
+      toast.style.padding = '10px 20px';
+      toast.style.borderRadius = '8px';
+      toast.style.fontWeight = 'bold';
+      toast.style.boxShadow = '0 0 10px rgba(0,0,0,0.2)';
+      toast.style.zIndex = '9999';
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 3000);
+    }
+
+    function formatReport(type, data) {
+      let html = `<h3 style="margin-top:10px;">Generated Report - ${type.replace(/^\w/, c => c.toUpperCase())}</h3><table border="1" cellpadding="6" style="width:100%; margin-top:10px; border-collapse: collapse;">`;
+      
+      if (type === 'patients') {
+        html += `<tr><th>Name</th><th>Date</th><th>Type</th></tr>`;
+        data.forEach(d => {
+          html += `<tr><td>${d.name}</td><td>${d.date}</td><td>${d.type}</td></tr>`;
+        });
+      } else if (type === 'appointments') {
+        html += `<tr><th>Patient</th><th>Doctor</th><th>Date</th><th>Status</th></tr>`;
+        data.forEach(d => {
+          html += `<tr><td>${d.patient}</td><td>${d.doctor}</td><td>${d.date}</td><td>${d.status}</td></tr>`;
+        });
+      } else if (type === 'billing') {
+        html += `<tr><th>Invoice</th><th>Patient</th><th>Total</th><th>Status</th></tr>`;
+        data.forEach(d => {
+          html += `<tr><td>${d.invoice}</td><td>${d.patient}</td><td>${d.total}</td><td>${d.status}</td></tr>`;
+        });
+      } else if (type === 'inventory') {
+        html += `<tr><th>Item</th><th>Used</th><th>Date</th></tr>`;
+        data.forEach(d => {
+          html += `<tr><td>${d.item}</td><td>${d.used}</td><td>${d.date}</td></tr>`;
+        });
+      }
+
+      html += `</table>`;
+      return html;
+    }
+
+    // Handle Report Generation
+    reportForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const type = document.getElementById('report-type').value;
+      const from = document.getElementById('date-from').value;
+      const to = document.getElementById('date-to').value;
+
+      if (!type || !from || !to) {
+        showToast("⚠️ Please fill all filter fields", "error");
+        return;
+      }
+
+      const data = sampleReports[type] || [];
+      if (data.length === 0) {
+        reportOutput.innerHTML = "<p>No data found for this report type.</p>";
+      } else {
+        reportOutput.innerHTML = formatReport(type, data);
+      }
+
+      showToast("✅ Report generated successfully!");
+    });
+
+    // Handle Download Report
+    downloadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const selectedFile = reportSelect.value;
+      if (!selectedFile) {
+        showToast("⚠️ Please select a report to download", "error");
+        return;
+      }
+
+      // Simulate download
+      const link = document.createElement('a');
+      link.href = selectedFile;
+      link.download = selectedFile;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      showToast(`⬇️ Download started: ${selectedFile}`);
+    });
+  });
+</script>
 </html>
