@@ -62,28 +62,28 @@ window.addEventListener("DOMContentLoaded", () => {
   const auth = getAuth(app);
 
   // Sign In
-  const signInButton = document.getElementById("signin-button");
-  signInButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    const email = document.getElementById("signin-email").value.trim();
-    const password = document.getElementById("password").value.trim();
+ signInButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  const email = document.getElementById("signin-email").value.trim();
+  const password = document.getElementById("password").value.trim();
 
-    if (!email || !password) {
-      alert("Please fill in all fields.");
-      return;
-    }
+  if (!email || !password) {
+    alert("Please fill in all fields.");
+    return;
+  }
 
-   signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    const user = userCredential.user;
-    alert("✅ Sign In Successful!\nWelcome, " + user.email + "!");
-    window.location.href = "../index.html"; // Redirect to home page
-  })
-  .catch((error) => {
-    alert("❌ Error: " + error.message);
-  });
-
-  });
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      alert("✅ Sign In Successful!\nWelcome, " + user.email + "!");
+      setTimeout(() => {
+        window.location.href = "index.html"; // Adjust path as needed
+      }, 100);
+    })
+    .catch((error) => {
+      alert("❌ Error: " + error.message);
+    });
+});
 
   // Sign Up
   const signUpButton = document.getElementById("signup-button");
