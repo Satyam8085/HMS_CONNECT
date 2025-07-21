@@ -75,10 +75,10 @@ body {
 }
 
 .right ul li a:hover {
-  color: #00ffff;
+  color: #f2f6f6;
   background: rgba(255, 255, 255, 0.15);
   transform: scale(1.08);
-  box-shadow: 0 2px 8px rgba(0, 255, 255, 0.4);
+  box-shadow: 0 2px 8px yellow
 }
 /* Slide In Animation */
 @keyframes slideInTop {

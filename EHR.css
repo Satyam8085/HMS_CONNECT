@@ -47,23 +47,43 @@ body {
   letter-spacing: 1px;
 }
 
-.navbar .right ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
 
-.navbar .right a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
+    .right ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+    }
 
-.navbar .right a:hover {
-  color: #ffd54f;
-}
+    .right ul li a {
+      position: relative;
+      display: inline-block;
+      padding: 2px 14px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
 
+    .right ul li a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      background: rgba(78, 205, 196, 0.1);
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+      z-index: -1;
+    }
+
+    .right ul li a:hover::before {
+      border-color: #e5f557;
+      box-shadow: 0 0 10px #4ecdc4;
+    }
+
+    .right ul li a:hover {
+      color: #c0ff52;
+    }
 main {
   padding: 40px 20px;
   max-width: 900px;

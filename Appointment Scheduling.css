@@ -40,25 +40,43 @@ body {
   color: #ffffff;
 }
 
-.navbar .right ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
 
-.navbar .right ul li a {
-  color: #f2f4f6;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
+    .right ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+    }
 
-.navbar .right ul li a:hover {
-  text-decoration: underline;
-  color: #ffffff;
-}
+    .right ul li a {
+      position: relative;
+      display: inline-block;
+      padding: 2px 14px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
 
+    .right ul li a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      background: rgba(78, 205, 196, 0.1);
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+      z-index: -1;
+    }
+
+    .right ul li a:hover::before {
+      border-color: #e5f557;
+      box-shadow: 0 0 10px #4ecdc4;
+    }
+
+    .right ul li a:hover {
+      color: #c0ff52;
+    }
 .appointment-section {
   max-width: 600px;
   margin: 40px auto;

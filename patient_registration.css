@@ -42,34 +42,42 @@ body {
   margin-right: 10px;
 }
 
-.right ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+    .right ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+    }
 
-.right ul li {
-  margin: 0 20px;
-}
+    .right ul li a {
+      position: relative;
+      display: inline-block;
+      padding: 2px 14px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 300;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
 
-.right ul li a {
-  color: beige;
-  text-decoration: none;
-  margin-right: 5px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
+    .right ul li a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 5px;
+      background: rgba(78, 205, 196, 0.1);
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+      z-index: -1;
+    }
 
-.right ul li a:hover {
-  color: aqua;
-  font-weight: bold;
-  transform: scale(1.1);
-}
+    .right ul li a:hover::before {
+      border-color: #e5f557;
+      box-shadow: 0 0 10px #4ecdc4;
+    }
 
-.right ul li:last-child {
-  margin-right: 10px;
-}
-
+    .right ul li a:hover {
+      color: #c0ff52;
+    }
 .dark-mode {
   background-color: #1e1e1e;
   color: #f0f0f0;
