@@ -73,14 +73,16 @@ window.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        alert("✅ Sign In Successful!\nWelcome, " + user.email + "!");
-      })
-      .catch((error) => {
-        alert("❌ Error: " + error.message);
-      });
+   signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    alert("✅ Sign In Successful!\nWelcome, " + user.email + "!");
+    window.location.href = "../index.html"; // Redirect to home page
+  })
+  .catch((error) => {
+    alert("❌ Error: " + error.message);
+  });
+
   });
 
   // Sign Up
